@@ -1,0 +1,317 @@
+<!doctype html>
+<!--To simulate order flow navigation clicks in MCP for Naples team to see-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Pizza Hut Australia</title>
+    <meta name="description" content="Pizza Hut Australia Home Page">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <link rel="stylesheet" href="css/bootstrap.css">    
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/sidr.css">
+</head>
+
+<body>
+
+    <section include-html="header"></section>
+        
+    <div class="content-wrapper">
+
+        <!-- Generic Content START -->
+        <div class="generic-page-wrapper">
+            <div class="generic-page-inner red-page full-width">
+                                
+                <div class="order-flow-wrapper">
+                    <div class="order-flow-inner order-flow-inner-with-nav">
+
+                        <section class="order-flow-content">
+                           
+                            <section class="order-flow-content-top-nav order-flow-nav">
+                                <a href="#" class="my-order-step complete">My Order</a>
+                                <a href="#" class="checkout-step active" id="step-2-trigger">Checkout</a>
+                                <a href="#" class="details-step" id="step-3-trigger">Details</a>
+                                <a href="#" class="payment-step" id="step-4-trigger">Payment</a>
+                            </section>
+                            
+                            <section class="order-flow-content-bottom">
+                                
+                                <!-- Step 2 Checkout Target START -->
+                                <div id="step-2-target">
+                                    <section class="no-account-area">
+                                        <div class="order-flow-content-bottom-title">Not got an account?</div>
+                                        <div class="no-account-actions">
+                                            <button type="submit" class="continue-as-guest btn btn-gold">Continue as a guest</button>
+                                            <span class="or-splitter">or</span>
+                                            <a href="#" class="create-an-account red-link">Create an account</a>
+                                        </div>
+                                    </section>
+                                    
+                                    <section class="account-area">
+                                        <div class="order-flow-content-bottom-title">Done this before?</div>
+                                        <form id="order-flow-sign-in-form" class="form-inline" action="#">
+                                            <div class="form-group">
+                                              <label for="emailAddress">Email Address</label>
+                                              <input type="email" class="form-control emailAddress" placeholder="Your email" required>
+                                            </div>
+                                            <div class="form-group">
+                                              <label for="password">Password</label>
+                                              <input type="password" class="form-control password" placeholder="Your password" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="checkbox-area">
+                                                    <input type="checkbox" class="checkbox remember-me" name="remember-me">
+                                                    <label for="remember-me">Remember Me</label>
+                                                </div>
+                                                <a href="#" class="red-link forgot-password">Forgot your password?</a>
+                                            </div>
+                                            <button type="submit" class="sign-in btn btn-gold">Sign In</button>
+                                        </form>
+                                    </section>
+                                </div>
+                                <!-- Step 2 Checkout Target END -->
+                                
+                                <!-- Step 3 Details Target START -->
+                                <div id="step-3-target" style="display: none;">
+                                    <section class="order-flow-details-area">
+                                        <div class="order-flow-content-bottom-title">Your Details</div>
+                                        <form id="order-flow-details-form" action="#">
+                                            <div class="form-group full-name-form-group">
+                                              <label for="fullName">Full name *</label>
+                                              <input type="text" class="form-control firstName" placeholder="First name" required>
+                                              <input type="text" class="form-control lastName" placeholder="Last name" required>
+                                            </div>
+                                            <div class="form-group email-form-group">
+                                              <label for="emailAddress">Email address *</label>
+                                              <input type="email" class="form-control emailAddress" placeholder="you@example.com" required>
+                                              <label for="emailAddressConfirm">Confirm Email address *</label>
+                                              <input type="email" class="form-control emailAddressConfirm" placeholder="you@example.com" required>
+                                            </div>
+                                            <div class="form-group phone-number-form-group">
+                                              <label for="phoneNumber">Phone Number</label>
+                                              <select class="form-control select-phone-number-type">
+                                                  <option>Home</option>
+                                                  <option>Office</option>
+                                              </select>
+                                              <input type="text" class="form-control phoneNumber" placeholder="(xxx) xxx-xxxx">
+                                              <input type="text" class="form-control extension" placeholder="Ext">
+                                            </div>
+                                            <div class="form-group delivery-address-form-group">
+                                              <label for="deliveryAddress">Delivery address *</label>
+                                              <select class="form-control select-delivery-address-type" required>
+                                                  <option>Select Type</option>
+                                                  <option>Type 1</option>
+                                                  <option>Type 2</option>
+                                              </select>
+                                              <input type="text" class="form-control streetAddress" placeholder="Street" required>
+                                              <input type="text" class="form-control cityAddress" placeholder="City" required>
+                                              <label for="zipCodeAddress">Zip code *</label>
+                                              <input type="text" class="form-control zipCodeAddress" placeholder="zip" required>
+                                            </div>
+                                            <div class="form-group special-instructions-form-group">
+                                                <label for="specialInstructions">Special Instructions</label>
+                                                <textarea class="form-control specialInstructions" placeholder="E.g. Please use the top buzzer"></textarea>
+                                            </div>
+
+                                            <div class="form-group deals-checkboxes-form-group">
+                                               <label for="dealsCheckboxes">Send me deals by</label>
+                                                <div class="checkbox-area">
+                                                    <div class="checkbox">
+                                                        <label>
+                                                            <input type="checkbox" value="email"> Email
+                                                        </label>
+                                                    </div>
+                                                    <div class="checkbox">
+                                                        <label>
+                                                            <input type="checkbox" value="text"> Text Message
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="details-continue-btn btn btn-gold">Continue</button>
+                                        </form>
+                                    </section>
+                                </div>
+                                <!-- Step 3 Details Target END -->
+                                
+                                <!-- Step 4 Payment Target START -->
+                                <div id="step-4-target" style="display: none;">
+                                    <section class="order-flow-payment-area">
+                                        <div class="order-flow-content-bottom-title">Your Payment Information</div>
+                                        <form id="order-flow-payment-form" action="#">
+                                            <div class="form-group payment-method-radios-form-group">
+                                               <label for="paymentMethodRadios">Payment Method *</label>
+                                                <div class="radio-area">
+                                                    <div class="radio">
+                                                        <label>
+                                                            <input type="radio" name="paymentRadios" value="creditCard"> Credit Card
+                                                        </label>
+                                                    </div>
+                                                    <div class="radio">
+                                                        <label>
+                                                            <input type="radio" name="paymentRadios" value="giftCard"> Gift Card
+                                                        </label>
+                                                    </div>
+                                                    <div class="radio">
+                                                        <label>
+                                                            <input type="radio" name="paymentRadios" value="paypal"> Paypal
+                                                        </label>
+                                                    </div>
+                                                    <div class="radio">
+                                                        <label>
+                                                            <input type="radio" name="paymentRadios" value="cashCheque"> Cash or Cheque
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group payment-method-credit-card-form-group">
+                                              <label for="creditCardNumber">Card number *</label>
+                                              <input type="text" class="form-control creditCardNumber" placeholder="xxxxxxxxxxxxxxxx" required>
+                                              <label for="creditCardNameOnCard">Name on card *</label>
+                                              <input type="text" class="form-control creditCardNameOnCard" placeholder="As it appears on the card" required>
+                                              <label for="creditCardExpirationDate">Expires in *</label>
+                                              <select class="form-control select-credit-card-expiration-month" required>
+                                                  <option>Month</option>
+                                                  <option>1</option>
+                                                  <option>2</option>
+                                                  <option>3</option>
+                                                  <option>4</option>
+                                                  <option>5</option>
+                                                  <option>6</option>
+                                                  <option>7</option>
+                                                  <option>8</option>
+                                                  <option>9</option>
+                                                  <option>10</option>
+                                                  <option>12</option>
+                                              </select>
+                                              <select class="form-control select-credit-card-expiration-year" required>
+                                                  <option>Year</option>
+                                                  <option>2014</option>
+                                                  <option>2015</option>
+                                                  <option>2016</option>
+                                                  <option>2017</option>
+                                                  <option>2018</option>
+                                                  <option>2019</option>
+                                                  <option>2020</option>
+                                              </select>
+                                            </div>
+
+                                            <div class="form-group billing-address-form-group">
+                                              <label for="billingAddress">Billing address *</label>
+                                              <div class="checkbox same-as-delivery-address-checkbox-area">
+                                                  <label>
+                                                      <input type="checkbox" value="sameAsDeliveryAddress"> Same as delivery address
+                                                  </label>
+                                              </div>
+                                              <select class="form-control select-billing-address-type" required>
+                                                  <option>Select Type</option>
+                                                  <option>Type 1</option>
+                                                  <option>Type 2</option>
+                                              </select>
+                                              <input type="text" class="form-control streetAddress" placeholder="Street" required>
+                                              <input type="text" class="form-control cityAddress" placeholder="City" required>
+                                              <label for="zipCodeAddress">Zip code *</label>
+                                              <input type="text" class="form-control zipCodeAddress" placeholder="zip" required>
+                                            </div>
+
+                                            <div class="form-group terms-policy-agree-form-group">
+                                                <div class="checkbox terms-policy-agree-checkbox-area">
+                                                    <label>
+                                                        <input type="checkbox" value="termsPolicyAgree"> I agree to the <a href="#" class="red-link">Terms of Use</a> and understand that any information will be used as described on this page and the Pizza Hut <a href="#" class="red-link">Privacy Policy</a> *
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <button type="submit" class="payment-place-order-btn btn btn-gold">Place your order</button>
+                                        </form>
+                                    </section>
+                                </div>
+                                <!-- Step 4 Payment Target END -->
+                                
+                            </section>
+                            
+                        </section>
+                        
+                        <section class="order-flow-sidebar">
+                            <div class="order-flow-sidebar-inner">
+                                <div class="sidebar-item sidebar-item-cart">
+                                    <div class="sidebar-item-heading">My Order</div>
+                                    <div class="sidebar-item-content-group">
+                                        <div class="sidebar-item-content">
+                                            <div class="sidebar-item-content-top">
+                                                <div class="sidebar-item-content-left">
+                                                    <div class="sidebar-item-title">3 Cheese Stuffed Crust</div>
+                                                    <ul class="sidebar-item-details-list">
+                                                        <li>Large 3 Cheese</li>
+                                                        <li>Stuffed Crust</li>
+                                                        <li>Cheese</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="sidebar-item-content-right">
+                                                    <div class="sidebar-item-price">$12.00</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="sidebar-item-content">
+                                            <div class="sidebar-item-content-top">
+                                                <div class="sidebar-item-content-left">
+                                                    <div class="sidebar-item-title">Breadsticks with Marinara Sauce - single order</div>
+                                                </div>
+                                                <div class="sidebar-item-content-right">
+                                                    <div class="sidebar-item-price">$4.25</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>    
+                                    <ul class="my-order-totals-list">
+                                        <li class="tax-line">
+                                            <span class="my-order-totals-list-key">Tax</span>
+                                            <span class="my-order-totals-list-value">$1.22</span>
+                                        </li>
+                                        <li class="total-line">
+                                            <span class="my-order-totals-list-key">Your Total</span>
+                                            <span class="my-order-totals-list-value">$31.22</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="sidebar-item">
+                                    <div class="address-area">
+                                        <span class="yellow-label">Carryout from</span>
+                                        <div class="address-lines">
+                                            <div class="address-line">1916 Skillman Street Apt# 224</div>
+                                            <div class="address-line">Dallas, TX 75206</div>
+                                            <a href="#" class="get-store-directions yellow-link">Get directions to our store</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </section>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <!-- Generic Content END -->
+       
+        <section include-html="mobileStack"></section>
+                
+        <div class="content-inner">
+                <section include-html="newsletter"></section>
+        </div>
+    </div>
+        
+    <section include-html="footer"></section>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="_assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/global.js"></script>
+    <script src="js/sidr.js"></script>
+
+</body>
+
+</html>

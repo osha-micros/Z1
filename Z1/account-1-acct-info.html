@@ -1,0 +1,221 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Pizza Hut Australia</title>
+    <meta name="description" content="Pizza Hut Australia Home Page">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <link rel="stylesheet" href="css/bootstrap.css">    
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/sidr.css">
+</head>
+
+<body>
+
+    <section include-html="header"></section>
+        
+    <div class="content-wrapper">
+
+        <!-- Generic Content START -->
+        <div class="generic-page-wrapper">
+            <div class="generic-page-inner red-page full-width">
+                                
+                <div class="account-page-wrapper">
+                    <div class="account-page-inner">
+                        
+                        <section class="account-page-top">
+                            <nav class="account-page-navigation">
+                                <div class="account-page-nav-links-group">
+                                    <a href="#" class="account-info active btn">My Account Information</a>
+                                    <a href="#" class="addresses-stores btn">My Addresses &amp; Stores</a>
+                                </div>
+                                <div class="account-page-nav-links-group">
+                                    <a href="#" class="fav-orders btn">My Favorite Orders</a>
+                                    <a href="#" class="past-orders btn">My Order History</a>
+                                </div>
+                            </nav>
+                            <div class="account-page-title">My Account Information</div>
+                        </section>
+                        
+                        <section class="account-page-bottom account-page-bottom-account-info">
+                            <section class="account-page-bottom-inner account-info-area">
+                                
+                                <div class="user-info-area">
+                                    <div class="user-info-name">Barry Adams <span class="user-action"><a href="#" class="user-edit yellow-text" data-toggle="modal" data-target="#edit-user-info-form-modal">edit</a></span></div>
+                                    <div class="user-info-contact-area">
+                                        <div class="user-info-contact-phone">(202) 555-1212</div>
+                                        <div class="user-info-contact-email">email@gmail.com</div>
+                                    </div>
+                                    <button class="change-password-btn btn">change password</button>
+                                    <div class="user-info-birthday">
+                                        <i class="glyphicon glyphicon-calendar"></i> 8 months until your birthday!
+                                    </div>
+                                </div>
+                                
+                                <div class="payment-info-area">
+                                    <div class="payment-info-left">
+                                        <div class="payment-info-title">Payment options</div>
+                                        <ul class="payment-info-cards-list">
+                                            <li>
+                                                <div class="card-image amex-cc-img"></div>
+                                                <div class="card-title">Ending in 7692 <span class="card-actions"><a href="#" class="card-edit">edit</a> | <a href="#" class="card-remove">remove</a></span></div>
+                                                <div class="card-name">Sunil Patel</div>
+                                                <div class="card-expiration">Expires 03/2015</div>
+                                            </li>
+                                            <li>
+                                                <div class="card-image visa-cc-img"></div>
+                                                <div class="card-title">Ending in 5714 <span class="card-actions"><a href="#" class="card-edit">edit</a> | <a href="#" class="card-remove">remove</a></span></div>
+                                                <div class="card-name">Sunil Patel</div>
+                                                <div class="card-expiration">Expires 01/2014</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="payment-info-right">
+                                       
+                                        <button class="add-credit-card-btn btn btn-gold">Add credit card</button>
+                                        
+                                        <form id="add-credit-card-form" action="#">
+                                            <div class="form-group add-credit-card-form-group">
+                                              <label for="creditCardType">Card type *</label>
+                                              <select class="form-control select-credit-card-type" required>
+                                                  <option>Select Type</option>
+                                                  <option>Visa</option>
+                                                  <option>Mastercard</option>
+                                                  <option>American Express</option>
+                                                  <option>Discover</option>
+                                              </select>
+                                              <label for="creditCardNameOnCard">Name on card *</label>
+                                              <input type="text" class="form-control creditCardNameOnCard" placeholder="As it appears on the card" required>
+                                              <label for="creditCardNumber">Card number *</label>
+                                              <input type="text" class="form-control creditCardNumber" placeholder="xxxxxxxxxxxxxxxx" required>
+                                              <label for="creditCardExpirationDate">Expiration *</label>
+                                              <select class="form-control select-credit-card-expiration-month" required>
+                                                  <option>Month</option>
+                                                  <option>1</option>
+                                                  <option>2</option>
+                                                  <option>3</option>
+                                                  <option>4</option>
+                                                  <option>5</option>
+                                                  <option>6</option>
+                                                  <option>7</option>
+                                                  <option>8</option>
+                                                  <option>9</option>
+                                                  <option>10</option>
+                                                  <option>12</option>
+                                              </select>
+                                              <select class="form-control select-credit-card-expiration-year" required>
+                                                  <option>Year</option>
+                                                  <option>2014</option>
+                                                  <option>2015</option>
+                                                  <option>2016</option>
+                                                  <option>2017</option>
+                                                  <option>2018</option>
+                                                  <option>2019</option>
+                                                  <option>2020</option>
+                                              </select>
+                                              <label for="creditCardSecurityCode">Security Code *</label>
+                                              <input type="text" class="form-control creditCardSecurityCode" placeholder="Security Code" required>
+                                            </div>
+                                            <button type="submit" class="save-credit-card-btn btn btn-gold">Save credit card</button>
+                                        </form>
+                                        
+                                    </div>
+                                </div>
+                                
+                                <!-- Edit Account Form Modal START -->
+                                <div class="modal" id="edit-user-info-form-modal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                <h4 class="modal-title">Edit Your Account Information</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                
+                                                <form id="edit-user-info-form" action="#">
+                                                    <div class="form-group full-name-form-group">
+                                                      <label for="firstName">First name</label>
+                                                      <input type="text" class="form-control firstName" placeholder="First name" required>
+                                                      <label for="lastName">Last name</label>
+                                                      <input type="text" class="form-control lastName" placeholder="Last name" required>
+                                                    </div>
+                                                    <div class="form-group password-form-group">
+                                                      <label for="password">Password</label>
+                                                      <div class="change-password-area"><a class="change-password red-link">Change password</a></div>
+                                                    </div>
+                                                    <div class="form-group birthday-form-group">
+                                                      <label for="birthday">Your birthday</label>
+                                                      <select class="form-control select-birthday-day" required>
+                                                          <option>1</option>
+                                                          <option>2</option>
+                                                          <option>3</option>
+                                                          <option>4</option>
+                                                          <option>5</option>
+                                                      </select>
+                                                      <select class="form-control select-birthday-month" required>
+                                                          <option>January</option>
+                                                          <option>February</option>
+                                                          <option>March</option>
+                                                          <option>April</option>
+                                                          <option>May</option>
+                                                          <option>June</option>
+                                                          <option>July</option>
+                                                          <option>August</option>
+                                                          <option>September</option>
+                                                          <option>October</option>
+                                                          <option>November</option>
+                                                          <option>December</option>
+                                                      </select>
+                                                      <select class="form-control select-birthday-year" required>
+                                                          <option>1900</option>
+                                                          <option>1901</option>
+                                                          <option>1902</option>
+                                                          <option>1903</option>
+                                                          <option>1904</option>
+                                                      </select>
+                                                    </div>
+                                                    <div class="form-group send-deals-form-group">
+                                                        <div class="checkbox send-deals-checkbox-area">
+                                                            <label>
+                                                                <input type="checkbox" value="sendDeals"> Send me deals for my local pizza hut
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <button type="submit" class="edit-account-save-changes-btn btn btn-gold">Save Changes</button>
+                                                </form>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                  
+                                </div>
+                                <!-- Edit Account Form Modal END -->
+                                
+                            </section>
+                        </section>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <!-- Generic Content END -->
+                       
+        <div class="content-inner">
+            <section include-html="promoBoxes"></section>
+            <section include-html="newsletter"></section>
+        </div>
+    </div>
+        
+    <section include-html="footer"></section>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="_assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/global.js"></script>
+    <script src="js/sidr.js"></script>
+
+</body>
+
+</html>

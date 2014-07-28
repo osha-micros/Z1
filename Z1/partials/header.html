@@ -1,0 +1,95 @@
+<div class="header-wrapper">
+
+    <div class="header-inner mobile-only">
+        <header class="main">
+            <span class="mobile-nav" id="mobile-nav-trigger" href="#mobile-nav-main">
+                <img src="images/mobile/nav_icon.png" alt="Navigation">
+                <span class="text">Menu</span>
+            </span>
+            <span class="mobile-logo"><img src="images/mobile/pizza_hut_logo_mobile.png" alt="Pizza Hut Australia Logo" class="pizza_hut_logo"></span>
+            <span class="mobile-basket">
+                <img src="images/mobile/basket_icon.png" alt="Basket">
+                <span class="text">Cart</span>
+                <span class="cart-item-count">15</span>
+            </span>
+        </header>
+    </div>
+
+    <div class="header-inner desktop-only">
+        <header class="main">
+            <img src="images/pizza_hut_logo.png" alt="Pizza Hut Australia Logo" class="pizza_hut_logo pull-left">
+            <div class="header-links pull-right">
+                <!-- Signed In User START -->
+                    <!--
+                    <a href="#" class="welcome-user">Welcome, Omar</a>
+                    <a href="#" class="sign-out">Sign Out</a>
+                    -->
+                <!-- Signed In User END -->
+
+                <!-- Signed Out User START -->
+                <a href="#" class="sign-in">Sign In</a>
+                <a href="#" class="create-account">Create Account</a>
+                <!-- Signed Out User END -->
+            </div>
+        </header>
+
+        <nav class="main-nav">
+          <ul class="nav nav-pills">
+              <li><a class="deals" href="#">Deals</a></li>
+              <li class="dropdown">
+                <a id="drop1" class="meals" role="button" data-toggle="dropdown" href="#">Meals</a>
+                <ul id="menu1" class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Meal 1</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Meal 2</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Meal 3</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a id="drop2" class="pizza" role="button" data-toggle="dropdown" href="#">Pizza</a>
+                <ul id="menu2" class="dropdown-menu" role="menu" aria-labelledby="drop2">
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Signature</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Legends</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Classics</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Light Pizza</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Mia</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Show All</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a id="drop3" class="sides" role="button" data-toggle="dropdown" href="#">Sides</a>
+                <ul id="menu3" class="dropdown-menu" role="menu" aria-labelledby="drop3">
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Side 1</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Side 2</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Side 3</a></li>
+                </ul>
+              </li>
+            </ul>
+
+          <div class="nav-order-status desktop-only">
+              <!-- Default: No Location Set Start -->
+<!--                      <button class="start-your-order nav-order-status-content btn btn-gold">Start Your Order</button>-->
+              <!-- Default: No Location Set End -->
+
+              <section class="started-your-order-info nav-order-status-content">
+                  <span class="delivery-info">
+                      <p class="delivery-location-line-area">
+                          <span class="delivery-location-line">1990 Greensboro Drive NW (apt #202), Fairfax, VA, 22030</span> <span class="edit-location">Edit</span>
+                      </p>
+                      <p class="delivery-time-line"><span class="red-text">Delivery Time:</span> 6:30pm, Mon 25th June</p>
+                  </span>
+                  <span class="delivery-cart">
+                      <a href="#" class="delivery-cart-area">
+                        <img class="cart-icon" src="images/icons/cart_icon_white.png" alt="Cart">
+                        <span class="cart-item-count">15</span>
+                      </a>
+                  </span>
+                  <span class="delivery-price">
+                      <div class="delivery-price-line">$208.28</div>
+                      <div class="add-coupon coupon-action">Add Coupon</div>
+                  </span>
+              </section>
+          </div>
+        </nav>
+
+    </div>
+</div>
